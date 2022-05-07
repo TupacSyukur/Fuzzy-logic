@@ -15,18 +15,18 @@ def fuzzification(shop):
         shop["value_service"].append((40 - service)/(40 - 20))
     if service > 50 and service <= 70:
         shop["value_service"].append(1)
-    elif service <= 30 or service > 80:
+    elif service <= 30 or service > 85:
         shop["value_service"].append(0)
     elif service > 30 and service <= 50:
         shop["value_service"].append((service - 30)/(50 - 30))
-    elif service > 70 and service <= 80:
-        shop["value_service"].append((80 - service)/(80 - 70))
-    if service > 85:
+    elif service > 70 and service <= 85:
+        shop["value_service"].append((85 - service)/(85 - 70))
+    if service > 80:
         shop["value_service"].append(1)
-    elif service <= 75:
+    elif service <= 65:
         shop["value_service"].append(0)
-    elif service > 75 and service <= 85:
-        shop["value_service"].append((service - 75)/(85 - 75))
+    elif service > 65 and service <= 80:
+        shop["value_service"].append((service - 65)/(80 - 65))
 
     shop["value_price"] = []
     # fuzzification price
@@ -68,7 +68,7 @@ def inference(shop):
             elif i == 1 and j == 1:
                 shop["value"][1].append(select)
             elif i == 1 and j == 2:
-                shop["value"][1].append(select)
+                shop["value"][0].append(select)
             elif i == 2 and j == 0:
                 shop["value"][2].append(select)
             elif i == 2 and j == 1:
