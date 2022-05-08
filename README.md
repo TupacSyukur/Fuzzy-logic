@@ -1,0 +1,2 @@
+# Fuzzy-logic
+This code is a simple example of fuzzy logic. Using python for the code implementation, we're not using any fuzzy logic for the sake of understanding the process of each step of fuzzy logic. This code is only an exercise for the Introduction of Artificial Intelligence. For the defuzzification method, we're using Sugeno style method to find the z* so we can find the most worth it shops in the dataset.
